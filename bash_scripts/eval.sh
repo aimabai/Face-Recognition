@@ -1,0 +1,14 @@
+python trainEmbedNet.py \
+  --gpu 0 \
+  --eval \
+  --model RegNetX400MF \
+  --trainfunc adaface \
+  --nOut 512 \
+  --batch_size 256 \
+  --nClasses 949 \
+  --initial_model project/exps/RegNetX400MF_t2/epoch0008.model \
+  --train_path /mnt/home/ee40034/data/train2 \
+  --test_path /mnt/home/ee40034/data/test \
+  --test_list /mnt/home/ee40034/data/test_pairs.csv \
+  --save_path exps/RegNetX400MF_t2_eval \
+  --output project/exps/RegNetX400MF_t2_eval/scores.csv

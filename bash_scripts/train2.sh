@@ -1,0 +1,18 @@
+python trainEmbedNet.py \
+  --gpu 0 \
+  --train_path /mnt/home/ee40034/data/train2 \
+  --test_path /mnt/home/ee40034/data/val \
+  --test_list /mnt/home/ee40034/data/val_pairs.csv \
+  --nClasses 949 \
+  --initial_model project/exps/RegNetX400MF/epoch0014.model \
+  --save_path project/exps/RegNetX400MF_t2\
+  --model RegNetX400MF \
+  --trainfunc adaface \
+  --margin 0.25\
+  --scale 32 \
+  --batch_size 256 \
+  --lr 0.0003 \
+  --weight_decay 0.0001 \
+  --test_interval 1 \
+  --scheduler cosine \
+  --max_epoch 15 \
